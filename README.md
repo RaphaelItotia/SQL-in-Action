@@ -105,6 +105,7 @@ I used **Microsoft SQL server** to write and run my SQL queries.
 ![SQL Output](assets/images/Insert_into_transactions.png)
 
 ### SQL Queries:
+
 -	Retrieved the first 10 records from the dataset using the <sup>SELECT</sup> and <sup>LIMIT</sup> functions.
   ```sql
 SELECT * FROM transactions
@@ -168,7 +169,9 @@ GROUP BY Payment_Method;
 ```
 #### SQL Output
 ![SQL Output](assets/images/most_used.png)
+
 ### Data Management:
+
 - Created a new table named customer_info with columns for customer details such as '*Customer_ID*', '*Customer_Name*', and '*Email*'.
    ```sql
   CREATE TABLE customer_info(
