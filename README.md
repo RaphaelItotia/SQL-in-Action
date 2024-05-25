@@ -21,7 +21,7 @@
   - Country: Country where the transaction took place.
   - Payment_Method: Payment method used for the transaction.
 
-You can get a copy of the dataset [here]().
+You can get a copy of the dataset [here](assets/dataset/Retail_transaction.csv).
 
 ### Objective:
 I used **Microsoft SQL server** to write and run my SQL queries.
