@@ -181,6 +181,8 @@ GROUP BY Payment_Method;
   INSERT INTO customer_info (Customer_ID,Customer_Name,Email)
   VALUES(101,'Kamau','kam@gmail.com'),(102,'Hellen','Hj1@gmail.com'),(103,'Jacob','jacobng@gmail.com'),(104,'Mukeni','Mukeni@gmail.com');
    ```
+   #### SQL Output
+![SQL Output](assets/images/create_new_table.png)
 - Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
    ```sql
    ALTER TABLE transactions
@@ -190,6 +192,8 @@ GROUP BY Payment_Method;
    SET Discount = Total_Price * 0.1;
    SELECT * FROM transactions
    ```
+    #### SQL Output
+![SQL Output](update.png)
 - Deleted transactions with a quantity of 0 or negative values.
   Used the <sup>DELETE</sup> function for this.
    ```sql
@@ -205,13 +209,16 @@ SELECT t.*, c.*
 FROM transactions t
 INNER JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
+#### SQL Output
+![SQL Output](inner_join.png)
 - Wrote a query to retrieve transaction details along with corresponding customer information.
 ```sql
 SELECT t.*, c.Customer_Name, C.Email
 FROM transactions t
 JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
-
+#### SQL Output
+![SQL Output](retrieve.png)
 ### SQL Functions:
  Utilized SQL functions to...
 
@@ -222,6 +229,8 @@ SELECT year(Transaction_Date) AS transaction_yr,
        month(Transaction_Date) AS transaction_month
 FROM transactions;
 ```
+#### SQL Output
+![SQL Output](extract.png)
 
 - Concatenated the '*Product_Name*' and '*Country*' columns to create a new column '*Product_Location*'.
 ```sql
@@ -229,3 +238,5 @@ SELECT *,
        CONCAT(Product_Name, ', ', Country) AS Product_Location
 FROM transactions;
 ```
+#### SQL Output
+![SQL Output](concatenate.png)
