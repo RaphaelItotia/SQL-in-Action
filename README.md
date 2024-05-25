@@ -112,18 +112,19 @@ WHERE Transaction_ID<=10
 SELECT COUNT(*) AS total_transactions
 FROM transactions;
 ```
--	Found the total revenue generated from PayPal or Credit Card using the <sup>SUM()</sup> function.
+-	Found the total revenue generated from PayPal using the <sup>SUM()</sup> function.
   ```sql
 SELECT SUM(Total_Price) AS total_revenue
 FROM transactions
-WHERE Payment_Method = 'PayPal' or 'Credit Card';
+WHERE Payment_Method = 'PayPal'
 ```
 -	Identified the top 5 best selling products by quantity sold using the <sup>SELECT</sup>, <sup>ORDER BY</sup>, and <sup>LIMIT</sup> functions.
   ```sql
-  SELECT Product_Name 
-  FROM transactions
-  ORDER BY Quantity DESC
-  LIMIT 5;
+  SELECT TOP 5 Product_Name, SUM(quantity_sold) AS total_quantity_sold
+FROM transactions
+GROUP BY Product_Name
+ORDER BY total_quantity_sold DESC;
+
 ```
 -	Calculated the average unit price of products sold using the <sup>AVG()</sup> function.
   ```sql
