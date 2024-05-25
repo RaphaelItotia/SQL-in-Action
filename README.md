@@ -150,55 +150,55 @@ FROM transactions
 GROUP BY Payment_Method;
 ```
 ### Data Management:
- Created a new table named customer_info with columns for customer details such as '*Customer_ID*', '*Customer_Name*', and '*Email*'.
+- Created a new table named customer_info with columns for customer details such as '*Customer_ID*', '*Customer_Name*', and '*Email*'.
    ```sql
-CREATE TABLE customer_info(
+  CREATE TABLE customer_info(
    Customer_ID int, 
    Customer_Name varchar(60),
    Email varchar(100));
-```
+  ```
+- Inserted sample customer data into the newly created table.
 
-Inserted sample customer data into the newly created table.
 ```sql
 INSERT INTO customer_info (Customer_ID,Customer_Name,Email)
 VALUES(101,'Kamau','kam@gmail.com'),(102,'Hellen','Hj1@gmail.com'),(103,'Jacob','jacobng@gmail.com'),(104,'Mukeni','Mukeni@gmail.com');
 ```
 
-Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
+- Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
 ```sql
 ```
-Deleted transactions with a quantity of 0 or negative values.
-Used the <sup>DELETE</sup> function for this.
+- Deleted transactions with a quantity of 0 or negative values.
+  Used the <sup>DELETE</sup> function for this.
 ```sql
 ```
 
 ### Joining Tables:
 
-Performed inner joins between the original dataset and the 'customer_info' table based on the '*Customer_ID*' column.
+- Performed inner joins between the original dataset and the 'customer_info' table based on the '*Customer_ID*' column.
 ```sql
 SELECT t.*, c.*
 FROM transactions t
 INNER JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
-Wrote a query to retrieve transaction details along with corresponding customer information.
+- Wrote a query to retrieve transaction details along with corresponding customer information.
 ```sql
 ```
 
 ### SQL Functions:
-Utilized SQL functions to...
+ Utilized SQL functions to...
 
-Calculated the total price for each transaction (*Unit_Price* * *Quantity*).
+- Calculated the total price for each transaction (*Unit_Price* * *Quantity*).
 ```sql
 ```
 
-Extracted the month and year from the '*Transaction_Date*' column.
+- Extracted the month and year from the '*Transaction_Date*' column.
 ```sql
 SELECT year(Transaction_Date) AS transaction_yr,
        month(Transaction_Date) AS transaction_month
 FROM transactions;
 ```
 
-Concatenated the '*Product_Name*' and '*Country*' columns to create a new column '*Product_Location*'.
+- Concatenated the '*Product_Name*' and '*Country*' columns to create a new column '*Product_Location*'.
 ```sql
 SELECT *,
        CONCAT(Product_Name, ', ', Country) AS Product_Location
