@@ -104,8 +104,8 @@ I used **Microsoft SQL server** to write and run my SQL queries.
 ### SQL Queries:
 -	Retrieved the first 10 records from the dataset using the <sup>SELECT</sup> and <sup>LIMIT</sup> functions.
   ```sql
-SELECT * FROM transactions 
-limit 10;
+SELECT * FROM transactions
+WHERE Transaction_ID<=10
 ```
 -	Calculated the total number of transactions in the dataset using the <sup>SELECT</sup> and <sup>COUNT()</sup> functions.
   ```sql
