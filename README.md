@@ -165,10 +165,18 @@ GROUP BY Payment_Method;
    ```
 - Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
    ```sql
+   ALTER TABLE transactions
+   ADD Discount DECIMAL(10, 2);
+
+   UPDATE transactions
+   SET Discount = Total_Price * 0.1;
+   SELECT * FROM transactions
    ```
 - Deleted transactions with a quantity of 0 or negative values.
   Used the <sup>DELETE</sup> function for this.
    ```sql
+   DELETE FROM transactions
+   WHERE Quantity <= 0;
    ```
 
 ### Joining Tables:
@@ -181,14 +189,14 @@ INNER JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
 - Wrote a query to retrieve transaction details along with corresponding customer information.
 ```sql
+SELECT t.*, c.Customer_Name, C.Email
+FROM transactions t
+JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
 
 ### SQL Functions:
  Utilized SQL functions to...
 
-- Calculated the total price for each transaction (*Unit_Price* * *Quantity*).
-```sql
-```
 
 - Extracted the month and year from the '*Transaction_Date*' column.
 ```sql
