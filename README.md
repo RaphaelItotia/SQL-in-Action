@@ -112,7 +112,7 @@ SELECT * FROM transactions
 WHERE Transaction_ID<=10
 ```
 #### SQL Output
-![SQL Output](assets/images/assets/images/1st_10.png)
+![SQL Output](assets/images/1st_10.png)
 -	Calculated the total number of transactions in the dataset using the <sup>SELECT</sup> and <sup>COUNT()</sup> functions.
   ```sql
 SELECT COUNT(*) AS total_transactions
