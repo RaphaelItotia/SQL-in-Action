@@ -193,7 +193,7 @@ GROUP BY Payment_Method;
    SELECT * FROM transactions
    ```
     #### SQL Output
-![SQL Output](update.png)
+![SQL Output](assets/images/update.png)
 - Deleted transactions with a quantity of 0 or negative values.
   Used the <sup>DELETE</sup> function for this.
    ```sql
@@ -210,7 +210,7 @@ FROM transactions t
 INNER JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
 #### SQL Output
-![SQL Output](inner_join.png)
+![SQL Output](assets/images/inner_join.png)
 - Wrote a query to retrieve transaction details along with corresponding customer information.
 ```sql
 SELECT t.*, c.Customer_Name, C.Email
@@ -218,7 +218,7 @@ FROM transactions t
 JOIN customer_info c ON t.Customer_ID = c.Customer_ID;
 ```
 #### SQL Output
-![SQL Output](retrieve.png)
+![SQL Output](assets/images/retrieve.png)
 ### SQL Functions:
  Utilized SQL functions to...
 
@@ -230,7 +230,7 @@ SELECT year(Transaction_Date) AS transaction_yr,
 FROM transactions;
 ```
 #### SQL Output
-![SQL Output](extract.png)
+![SQL Output](assets/images/extract.png)
 
 - Concatenated the '*Product_Name*' and '*Country*' columns to create a new column '*Product_Location*'.
 ```sql
@@ -239,4 +239,4 @@ SELECT *,
 FROM transactions;
 ```
 #### SQL Output
-![SQL Output](concatenate.png)
+![SQL Output](assets/images/concatenate.png)
