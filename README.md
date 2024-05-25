@@ -156,21 +156,19 @@ GROUP BY Payment_Method;
    Customer_ID int, 
    Customer_Name varchar(60),
    Email varchar(100));
-  ```
+   ```
 - Inserted sample customer data into the newly created table.
-
-```sql
+   ```sql
 INSERT INTO customer_info (Customer_ID,Customer_Name,Email)
 VALUES(101,'Kamau','kam@gmail.com'),(102,'Hellen','Hj1@gmail.com'),(103,'Jacob','jacobng@gmail.com'),(104,'Mukeni','Mukeni@gmail.com');
-```
-
+    ```
 - Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
-```sql
-```
+   ```sql
+   ```
 - Deleted transactions with a quantity of 0 or negative values.
   Used the <sup>DELETE</sup> function for this.
-```sql
-```
+   ```sql
+   ```
 
 ### Joining Tables:
 
