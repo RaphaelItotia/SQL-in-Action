@@ -184,7 +184,7 @@ GROUP BY Payment_Method;
   INSERT INTO customer_info (Customer_ID,Customer_Name,Email)
   VALUES(101,'Kamau','kam@gmail.com'),(102,'Hellen','Hj1@gmail.com'),(103,'Jacob','jacobng@gmail.com'),(104,'Mukeni','Mukeni@gmail.com');
    ```
-   #### SQL Output
+#### SQL Output
 ![SQL Output](assets/images/create_new_table.png)
 - Updated the dataset(inserted into Transactions table) to include a new column '*Discount*' and calculate a 10% discount for each transaction.
    ```sql
@@ -195,7 +195,7 @@ GROUP BY Payment_Method;
    SET Discount = Total_Price * 0.1;
    SELECT * FROM transactions
    ```
-    #### SQL Output
+#### SQL Output
 ![SQL Output](assets/images/update.png)
 - Deleted transactions with a quantity of 0 or negative values.
   Used the <sup>DELETE</sup> function for this.
