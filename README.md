@@ -27,7 +27,7 @@ You can get a copy of the dataset [here](assets/dataset/Retail_transaction.csv).
 I used **Microsoft SQL server** to write and run my SQL queries.
 
 ### Data Setup:
-1. I created a table alias Transactions with the above columns.   
+1. I created a table alias transactions with the above columns.   
 2. Inserted the dataset into the Transactions table.
 
 ```sql
